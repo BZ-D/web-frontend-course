@@ -1,0 +1,196 @@
+html {
+    height: 100%;
+}
+body {
+    margin: 0 0 0 0;
+    height: 100%;
+    border-top: 0;
+    background-size: cover;
+    background: #cccccc url("../assets/login_bg.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-enter-box {
+    margin: 1px auto 0;
+    width: 50%;
+    height: 70%;
+    background: rgba(0, 0, 0, .55);
+    border-radius: 19px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 30px;
+}
+
+.login-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-hint h2 {
+    font-family: Helvetica, "Arial", "STZhongsong", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    font-size: 60px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: hue 9s infinite linear;
+    text-shadow: black 1px 1px 1px;
+}
+
+.login-hint h2:hover {
+    cursor: default;
+}
+
+@-webkit-keyframes hue {
+    0% {
+        color: white;
+    }
+    50% {
+        color: #c0c0c0;
+    }
+    100% {
+        color: white;
+    }
+}
+
+.info-enter-box img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.info-enter-box form div {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-enter-box form .input-box input {
+    outline-style: none;
+    text-align: center;
+    border: 0;
+    height: 30px;
+
+    background-color: #ffffff00;
+    color: white;
+    font-size: 20px;
+    border-bottom: 1px solid white;
+
+    transition: .3s;
+}
+
+.info-enter-box form .input-box input:focus {
+    border-bottom: solid #03a9f4 2px;
+    box-shadow: 0 0 2px #03a9f4;
+}
+
+.info-enter-box form #agree-checkbox, #signup-hint-box {
+    /*width: 80%;*/
+    margin: 0 auto;
+    color: white;
+    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    font-size: 15px;
+}
+
+a {
+    margin-left: 7px;
+    color: #bdbbbb;
+    text-decoration: none;
+    transition: .4s;
+}
+
+a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.qr-code-box {
+    width: 40%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .65);
+
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.qr-code-box img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.qr-code-box span {
+    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 20px;
+
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qr-code-box span img {
+    width: 30px;
+    height: 30px;
+    margin: auto auto auto 10px;
+}
+
+.qr-code-box blockquote {
+    margin-top: 20px;
+    font-family: "Arial", sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20px;
+    color: #bbbbbb;
+}
+
+.qr-code-box blockquote::before {
+    content: '"';
+}
+
+.qr-code-box blockquote::after {
+    content: '"';
+}
+
+#confirm-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 150px;
+    height: 42px;
+    margin: 0 auto 35px;
+    cursor: pointer;
+
+    box-shadow: none;
+
+    border: none;
+    border-radius: 19px;
+
+    background: linear-gradient(to right, #2bfabb, #e6abff);
+
+
+    color: white;
+    text-decoration: none;
+    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#confirm-login:hover {
+    background: linear-gradient(to right, #44cca3, #a759c7);
+}

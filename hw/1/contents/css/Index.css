@@ -1,0 +1,113 @@
+body, html {
+    height: 100%;
+}
+
+body {
+    border-top: 0;
+    background-size: cover;
+    background: #cccccc url("../assets/home_bg.png") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.greeting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.greeting h2 {
+    font-family: Helvetica, "Arial", "STZhongsong", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    font-size: 60px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: hue 9s infinite linear;
+    text-shadow: black 1px 1px 1px;
+}
+
+.greeting h2:hover {
+    cursor: default;
+}
+
+@-webkit-keyframes hue {
+    0% {
+        color: #ca73ec;
+    }
+    50% {
+        color: #6c265f;
+    }
+    100% {
+        color: #ca73ec;
+    }
+}
+
+.choose-box {
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 70%;
+    border-radius: 19px;
+    background: rgba(0, 0, 0, .55);
+    padding-top: 40px;
+}
+
+#choose-hint {
+    font-family: Helvetica, "Arial", "STZhongsong", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    font-size: 25px;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000000;
+    font-weight: bold;
+
+    margin-bottom: 40px;
+
+}
+
+#login-button, #signup-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    width: 200px;
+    height: 42px;
+    margin: 0 auto 35px;
+
+    border-radius: 19px;
+
+    background: linear-gradient(to right, #2bfabb, #e6abff);
+
+
+    color: white;
+    text-decoration: none;
+    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#login-button:hover, #signup-button:hover {
+    background: linear-gradient(to right, #44cca3, #a759c7);
+}
+
+
+.learn-more-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.learn-more-area * {
+    color: #bdbbbb;
+    text-decoration: none;
+    transition: .4s;
+}
+
+.learn-more-area *:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.learn-more-area #goto-nju {
+    margin-right: 30%;
+}

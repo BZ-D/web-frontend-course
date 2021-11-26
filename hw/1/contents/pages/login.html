@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/Login.css">
+  <title>登录平台</title>
+</head>
+<body>
+  <div class="info-enter-box">
+    <div class="login-hint">
+      <h2>登录</h2>
+    </div>
+    <form>
+      <div class="input-box" id="user-name-box">
+        <img class="icon" src="../assets/头像.png" alt="">
+        <input type="text" placeholder="用户名" required>
+      </div>
+      <div class="input-box" id="passwd-box">
+        <img class="icon" src="../assets/密码.png" alt="">
+        <input type="password" placeholder="密码" required>
+      </div>
+      <div id="agree-checkbox">
+        <input id="agree-btn" type="checkbox" required>我同意
+        <a href="https://security.nju.edu.cn/" target="_blank">用户许可条款</a>
+      </div>
+      <a id="confirm-login" href="main.html">
+        确 认
+      </a>
+    </form>
+    <div id="signup-hint-box">
+      <span>还没账号?</span>
+      <a href="signup.html">立即注册</a>
+    </div>
+  </div>
+
+  <div class="qr-code-box">
+    <img src="../assets/QR.jpg" alt="QR of my WeChat">
+    <span id="wechat-hint">
+      扫一扫二维码，加我微信
+      <img src="../assets/微信.png" alt="">
+    </span>
+    <img src="../assets/QQ.jpg" alt="QR of my QQ">
+    <span id="qq-hint">
+      扫一扫二维码，加我QQ
+      <img src="../assets/external_qq.png" alt="">
+    </span>
+    <blockquote>
+      Life was like a box of chocolate, you would never know what you're
+      going to get.
+    </blockquote>
+  </div>
+</body>
+</html>
