@@ -1,0 +1,110 @@
+html, body {
+    height: 100%;
+    margin: 0 0 0 0;
+    background-color: #32353a;
+}
+
+#main-page {
+    height: 100%;
+    width: 100%;
+    color: #b7bcbe;
+
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: center;*/
+}
+
+span[class*="border-"] {
+    position: fixed;
+    background: #1f2122;
+}
+
+.border-top {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+}
+
+.border-left {
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 100%;
+}
+
+.border-bottom {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+}
+
+.border-right {
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100%;
+}
+
+.separator {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    -webkit-transform:scaleX(-1);
+
+    animation: rotation 4s linear infinite;
+    -moz-animation: rotation 4s linear infinite;
+    -webkit-animation: rotation 4s linear infinite;
+    -o-animation: rotation 4s linear infinite;
+}
+
+@-webkit-keyframes rotation {
+
+    0% {
+        -webkit-transform: scaleX(-1);
+    }
+
+    50% {
+        -webkit-transform: scaleX(1);
+    }
+
+    100% {
+        -webkit-transform: scaleX(-1);
+    }
+}
+
+.banner {
+    font-family: "Arial", "STZhongsong", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+    margin: 8% auto 15px;
+}
+
+.gallery {
+    width: 80%;
+    height: 80%;
+
+}
+
+.gallery .item {
+    width: 80%;
+    margin: 0 auto;
+
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery .item .image {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.gallery .item .detail {
+    margin-bottom: 32px;
+}
