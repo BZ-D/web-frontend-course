@@ -80,6 +80,7 @@ $(function () {
       type: 'post',
       url: '/get_salt',
       dataType: 'json',
+      async: false,
       data: {
         email: window.localStorage.getItem('email')
       },
@@ -94,6 +95,7 @@ $(function () {
             type: 'post',
             url: '/change_passwd',
             dataType: 'json',
+            async: false,
             data: {
               uid: window.localStorage.getItem('uid'),
               originalPasswd: passwd,

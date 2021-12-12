@@ -160,6 +160,7 @@ function processSignup() {
     url: '/signup',
     dataType: 'json',
     data: signupData,
+    async: false,
 
     success: function (res) {
       console.log(res)

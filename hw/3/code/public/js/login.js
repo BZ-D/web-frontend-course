@@ -69,6 +69,7 @@ function processLogin() {
     type: 'post',
     url: '/get_salt',
     dataType: 'json',
+    async: false,
     data: {
       email: email.val()
     },
@@ -84,6 +85,7 @@ function processLogin() {
           type: 'post',
           url: '/login',
           dataType: 'json',
+          async: false,
           data: {
             uid: _uid,
             passwd: genHashedPasswd(passwd.val(), salt)
