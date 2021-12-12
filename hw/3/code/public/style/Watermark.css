@@ -1,0 +1,63 @@
+html, body {
+    height: 100%;
+    margin: 0 0 0 0;
+    background-color: #32353a;
+}
+
+#main-page {
+    height: 100%;
+    width: 100%;
+    color: #b7bcbe;
+
+    /*display: flex;*/
+    /*display: -webkit-flex;*/
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+}
+
+
+.head-line, .tail-line {
+    height: 50px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.banner {
+    font-family: "Arial", "STZhongsong", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+    margin: 40px auto 40px;
+    text-align: center;
+}
+
+.pics {
+    width: 80%;
+    margin: 0 auto;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pics li {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto 40px;
+}
+
+.pics li span {
+    margin-top: 5px;
+    font-size: 20px;
+    font-family: Helvetica, "Arial", "黑体", "宋体", sans-serif;
+}
+
+.pics li img {
+    width: 60%;
+}
+
+
+
+

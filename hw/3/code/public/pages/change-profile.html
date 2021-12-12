@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>个人空间</title>
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="../js/change_passwd.js"></script>
+  <script src="../js/util/verifyCode.js"></script>
+  <script src="../js/util/shake.js"></script>
+  <script src="../js/util/validCheck.js"></script>
+  <script src="../js/util/passwdHash.js"></script>
+  <link rel="stylesheet" href="../style/Change.css">
+</head>
+<body>
+<div id="main-page">
+  <div class="head-line" style="border-bottom: 2px solid #c4c4c4;"></div>
+  <div class="banner">
+    修改密码
+  </div>
+  <div class="change-area">
+    <form>
+      <div class="input-box" id="original-passwd">
+        <div>
+          <img src="../image/密码.png" alt="">
+          <input type="password" required placeholder="原密码">
+        </div>
+        <span class="original-passwd-hint">
+        
+        </span>
+      </div>
+      <div class="input-box" id="new-passwd">
+        <div>
+          <img src="../image/密码.png" alt="">
+          <input type="password" required placeholder="新密码">
+        </div>
+        <div id="new-password-hint-box">
+          <img src="" id="strength-icon" alt="">
+          <span class="new-passwd-hint">
+          
+          </span>
+        </div>
+      </div>
+      <div class="input-box" id="repeat-passwd">
+        <div>
+          <img src="../image/重复密码.png" alt="">
+          <input type="password" required placeholder="确认新密码">
+        </div>
+        <span class="new-passwd-repeat-hint">
+        
+        </span>
+      </div>
+      <div class="input-box" id="verify-box">
+        <div>
+          <img src="../image/验证码.png" alt="">
+          <input type="text" required placeholder="验证码">
+          <canvas id="canvas" width="80" height="30"></canvas>
+        </div>
+        <span class="verify-hint">
+        
+        </span>
+      </div>
+      <a id="confirm-change">确认修改</a>
+      <a id="return-to-main" href="/main_page">返回主页</a>
+    </form>
+  </div>
+  <div class="tail-line" style="border-bottom: 2px solid #c4c4c4;"></div>
+
+</div>
+
+<span class="border-top"></span>
+<span class="border-left"></span>
+<span class="border-right"></span>
+<span class="border-bottom"></span>
+</body>
+</html>

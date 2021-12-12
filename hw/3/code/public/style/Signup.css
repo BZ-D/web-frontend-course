@@ -1,0 +1,233 @@
+html {
+    height: 100%;
+}
+body {
+    margin: 0 0 0 0;
+    height: 100%;
+    border-top: 0;
+    background-size: cover;
+    background: #cccccc url("../image/login_bg.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-enter-box {
+    margin: 1px auto 0;
+    width: 50%;
+    height: 85%;
+    background: rgba(0, 0, 0, .75);
+    border-radius: 19px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 30px;
+}
+
+.signup-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-hint h2 {
+    font-family: Helvetica, "Arial", "STZhongsong", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    font-size: 60px;
+    color: #fff;
+    text-align: center;
+    text-shadow: black 2px 2px 2px;
+    margin-bottom: 5px;
+}
+
+.signup-hint h2:hover {
+    cursor: default;
+}
+
+
+.info-enter-box form {
+    width: 60%;
+    /*padding-left: 7%;*/
+}
+
+.info-enter-box img {
+    width: 25px;
+    margin-right: 10px;
+}
+
+.info-enter-box form div {
+    height: 60px;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-enter-box form .input-box {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-enter-box form .input-box .icon {
+    width: 25px;
+}
+
+.info-enter-box form .input-box input {
+    outline-style: none;
+    text-align: left;
+    border: 0;
+    height: 30px;
+    width: 100%;
+
+    background-color: #ffffff00;
+    color: white;
+    font-size: 17px;
+    border-bottom: 1px solid white;
+
+    transition: .3s;
+}
+
+.info-enter-box form .input-box input:focus {
+    border-bottom: solid #03a9f4 2px;
+    box-shadow: 0 0 2px #03a9f4;
+}
+
+.info-enter-box form #agree-checkbox, #login-hint-box {
+    /*width: 80%;*/
+    margin: 0 auto;
+    color: white;
+    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    font-size: 15px;
+}
+
+a {
+    margin-left: 7px;
+    color: #bdbbbb;
+    text-decoration: none;
+    transition: .4s;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+#password-hint-box {
+    display: none;
+    text-align: center;
+}
+
+#password-hint-box img {
+    margin-right: 3px;
+    width: 18px;
+}
+
+#canvas {
+    vertical-align: middle;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.email-hint, .passwd-hint, .repeat-passwd-hint, .display-name-hint, .verify-hint {
+    text-align: center;
+    color: rgba(248, 90, 90);
+}
+
+.qr-code-box {
+    width: 30%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .65);
+
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.qr-code-box img {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.qr-code-box span {
+    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    margin-bottom: 20px;
+
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qr-code-box span img {
+    width: 20px;
+    margin: auto auto auto 10px;
+}
+
+.qr-code-box blockquote {
+    margin-top: 20px;
+    font-family: "Arial", sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 15px;
+    color: #bbbbbb;
+}
+
+.qr-code-box blockquote::before {
+    content: '"';
+}
+
+.qr-code-box blockquote::after {
+    content: '"';
+}
+
+#confirm-signup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 150px;
+    height: 42px;
+    margin: 0 auto 35px;
+    cursor: pointer;
+
+    box-shadow: none;
+
+    border: none;
+    border-radius: 19px;
+
+    background: linear-gradient(to right, #2bfabb, #e6abff);
+
+
+    color: white;
+    text-decoration: none;
+    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#confirm-signup:hover {
+    background: linear-gradient(to right, #44cca3, #a759c7);
+}
+
+.shake {
+    /* 抖动提示效果 */
+    animation: shake 800ms ease-in-out;
+}
+
+@keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(+2px, 0, 0); }
+    30%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(+4px, 0, 0); }
+    50% { transform: translate3d(-4px, 0, 0); }
+}

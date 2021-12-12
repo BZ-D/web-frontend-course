@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../style/Login.css">
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="../js/login.js"></script>
+  <script src="../js/util/verifyCode.js"></script>
+  <script src="../js/util/passwdHash.js"></script>
+  <script src="../js/util/shake.js"></script>
+  <script src="../js/util/validCheck.js"></script>
+  <title>登录平台</title>
+</head>
+<body>
+  <div class="info-enter-box">
+    <div class="login-hint">
+      <h2>登录</h2>
+    </div>
+    <form>
+      <div class="input-box" id="user-name-box">
+        <div>
+          <img class="icon" src="../image/邮件.png" alt="">
+          <input type="email" placeholder="邮箱地址" required>
+        </div>
+        <span class="email-hint">
+<!--          请输入您的邮箱地址！-->
+        </span>
+      </div>
+      <div class="input-box" id="passwd-box">
+        <div>
+          <img class="icon" src="../image/密码.png" alt="">
+          <input type="password" placeholder="密码" required>
+        </div>
+        <span class="passwd-hint">
+<!--          请输入您的密码！-->
+        </span>
+      </div>
+      <div class="input-box" id="verify-box">
+        <div>
+          <img class="icon" src="../image/验证码.png" alt="">
+          <input type="text" placeholder="验证码" required>
+          <canvas id="canvas" width="80" height="30"></canvas>
+        </div>
+        <span class="verify-hint">
+<!--          请输入验证码！-->
+        </span>
+      </div>
+      <div class="res-hint-box">
+        <span id="res-hint">
+          <!--用户名或密码错误-->
+        </span>
+      </div>
+      <div id="confirm-login">
+        登&nbsp;录
+      </div>
+    </form>
+    <div id="signup-hint-box">
+      <span>还没账号?</span>
+      <a href="/signup_page">立即注册</a>
+    </div>
+  </div>
+
+  <div class="qr-code-box">
+    <img src="../image/QR.jpg" alt="QR of my WeChat">
+    <span id="wechat-hint">
+      扫一扫二维码，加我微信
+      <img src="../image/微信.png" alt="">
+    </span>
+    <img src="../image/QQ.jpg" alt="QR of my QQ">
+    <span id="qq-hint">
+      扫一扫二维码，加我QQ
+      <img src="../image/external_qq.png" alt="">
+    </span>
+    <blockquote>
+      Life was like a box of chocolate, you would never know what you're
+      going to get.
+    </blockquote>
+  </div>
+</body>
+</html>
