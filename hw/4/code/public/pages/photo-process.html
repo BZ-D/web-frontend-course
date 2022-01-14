@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../style/Process.css">
+  <link rel="stylesheet" href="../js/util/cropper/cropper.min.css">
+  <script src="../js/util/lena.js"></script>
+  <script src="../js/util/caman.full.js"></script>
+  <script src="../js/util/cropper/cropper.min.js"></script>
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="../js/photo_process.js"></script>
+  <title>图片处理</title>
+</head>
+<body>
+  <h2>基础滤镜</h2>
+  <div class="ps">
+    <img id="real-image" src="" alt="" style="display: none">
+    <div class="origin-area">
+      <img id="original-image" src="" alt="">
+    </div>
+    <div class="process-area">
+<!--      <canvas id="filtered-image"></canvas>-->
+      <canvas id="caman-canvas"></canvas>
+    </div>
+  </div>
+
+  <div class="pick">
+    <div class="btn-area" style="display: none">
+      <div class="filter-btn picked">
+        复古
+      </div>
+      <div class="filter-btn">
+        锐化
+      </div>
+      <div class="filter-btn">
+        老照片
+      </div>
+      <div class="filter-btn">
+        负片
+      </div>
+      <div class="filter-btn">
+        明艳
+      </div>
+      <div class="filter-btn">
+        鲜红
+      </div>
+    </div>
+  </div>
+
+  <div class="more-pick">
+    <div class="diy-area">
+      <div class="filter">
+        <div class="filter-name">
+          亮度
+        </div>
+        <div class="filter-set">
+          <input type="range" id="brightness" min="-100" max="100" step="1" value="0">
+          <span class="filter-value"></span>
+        </div>
+      </div>
+      <div class="filter">
+        <div class="filter-name">
+          对比度
+        </div>
+        <div class="filter-set">
+          <input type="range" id="contrast" min="-100" max="100" step="1" value="0">
+          <span class="filter-value"></span>
+        </div>
+      </div>
+      <div class="filter">
+        <div class="filter-name">
+          饱和度
+        </div>
+        <div class="filter-set">
+          <input type="range" id="saturation" min="-100" max="100" step="1" value="0">
+          <span class="filter-value"></span>
+        </div>
+      </div>
+      <div class="filter">
+        <div class="filter-name">曝光度</div>
+        <div class="filter-set">
+          <input type="range" id="exposure" min="-100" max="100" step="1" value="0">
+          <span class="filter-value"></span>
+        </div>
+      </div>
+      <div class="filter">
+        <div class="filter-name">色调</div>
+        <div class="filter-set">
+          <input type="range" id="hue" min="0" max="100" step="1" value="0">
+          <span class="filter-value"></span>
+        </div>
+      </div>
+      <div class="filter">
+        <div class="filter-name">灰度</div>
+        <div class="filter-set">
+          <input type="range" id="sepia" min="0" max="100" step="1" value="0">
+          <span class="filter-value"></span>
+        </div>
+      </div>
+      <div class="filter">
+        <div class="filter-name">加噪</div>
+        <div class="filter-set">
+          <input type="range" id="noise" min="0" max="100" step="1" value="0">
+          <span class="filter-value"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="more-operations">
+    <div id="check-btn">
+      <span>预览效果</span>
+    </div>
+  </div>
+
+  <div class="tailor-btn">
+    图像裁切&nbsp;→
+  </div>
+  
+  <div class="more-filters-btn">
+    自定参数&nbsp;→
+  </div>
+
+</body>
+</html>

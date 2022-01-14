@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>水印示例</title>
+  <script>
+    if (window.localStorage.getItem('uid') === null) {
+      // 未登录
+      location.href = '/login_page'
+    }
+  </script>
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="../js/watermark.js" type="module"></script>
+  <link rel="stylesheet" href="../style/Watermark.css">
+</head>
+<body>
+<div id="main-page">
+  <div class="head-line" style="border-bottom: 2px solid #c4c4c4;"></div>
+  <div class="banner">
+    水印演示
+  </div>
+  
+  <ul id="pic-list" class="pics">
+    <li>
+      <img id="origin" src="../image/user_image.png" alt="">
+      <span class="description">原图（孺子牛）</span>
+    </li>
+  </ul>
+  
+  <div class="tail-line" style="border-bottom: 2px solid #c4c4c4;"></div>
+
+</div>
+
+</body>
+
+</html>

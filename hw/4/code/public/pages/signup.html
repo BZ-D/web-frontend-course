@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../style/Signup.css">
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="../js/signup.js"></script>
+  <script src="../js/util/verifyCode.js"></script>
+  <script src="../js/util/shake.js"></script>
+  <script src="../js/util/validCheck.js"></script>
+  <script src="../js/util/passwdHash.js"></script>
+  <title>账号注册</title>
+</head>
+<body>
+<div class="info-enter-box">
+  <div class="signup-hint">
+    <h2>注册</h2>
+  </div>
+  <form>
+    <div class="input-box" id="email-box">
+      <div>
+        <img class="icon" src="../image/邮件.png" alt="">
+        <input type="email" placeholder="邮箱">
+      </div>
+      <span class="email-hint"></span>
+    </div>
+    <div class="input-box" id="user-name-box">
+      <div>
+        <img class="icon" src="../image/头像.png" alt="">
+        <input type="text" placeholder="用户昵称">
+      </div>
+      <span class="display-name-hint"></span>
+    </div>
+    <div class="input-box" id="passwd-box">
+      <div>
+        <img class="icon" src="../image/密码.png" alt="">
+        <input type="password" placeholder="密码">
+      </div>
+      <div id="password-hint-box">
+        <img src="" id="strength-icon" alt="">
+        <span class="passwd-hint">
+      
+        </span>
+      </div>
+    </div>
+    <div class="input-box" id="passwd-repeat-box">
+      <div>
+        <img class="icon" src="../image/重复密码.png" alt="">
+        <input type="password" placeholder="重复密码">
+      </div>
+      <span class="repeat-passwd-hint">
+      </span>
+    </div>
+    <div class="input-box" id="verify-box">
+      <div>
+        <img class="icon" src="../image/验证码.png" alt="">
+        <input type="text" placeholder="验证码" required>
+        <canvas id="canvas" width="80" height="30"></canvas>
+      </div>
+      <span class="verify-hint">
+<!--          请输入验证码！-->
+        </span>
+    </div>
+    <div id="agree-checkbox">
+      <input id="agree-btn" type="checkbox">我同意
+      <a href="https://security.nju.edu.cn/" target="_blank">用户许可条款</a>
+    </div>
+    <div id="confirm-signup">
+      注&nbsp;册
+    </div>
+  </form>
+  <div id="login-hint-box">
+    <span>已有账号?</span>
+    <a href="/login_page">立即登录</a>
+  </div>
+</div>
+
+<div class="qr-code-box">
+  <img src="../image/email_QR.jpg" alt="QR of my E-mail">
+  <span id="email-hint">
+      扫一扫二维码，给我发邮件
+      <img src="../image/邮件.png" alt="">
+  </span>
+  <blockquote>
+    要以国家富强、人民幸福为己任，胸怀理想、志存高远，投身中国特色社会主义伟大实践，并为之终生奋斗。心中有阳光，脚下有力量，为了理想能坚持、不懈怠，才能创造无愧于时代的人生。
+  </blockquote>
+</div>
+</body>
+</html>

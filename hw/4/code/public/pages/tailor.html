@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../js/util/cropper/cropper.min.css">
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/2.0.0-alpha.2/cropper.css" integrity="sha512-5ZQRy5L3cl4XTtZvjaJRucHRPKaKebtkvCWR/gbYdKH67km1e18C1huhdAc0wSnyMwZLiO7nEa534naJrH6R/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/2.0.0-alpha.2/cropper.min.js" integrity="sha512-IlZV3863HqEgMeFLVllRjbNOoh8uVj0kgx0aYxgt4rdBABTZCl/h5MfshHD9BrnVs6Rs9yNN7kUQpzhcLkNmHw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+  <script src="../js/util/cropper/cropper.min.js"></script>
+  <script src="../js/util/cropper/jquery-cropper.js"></script>
+  <title>图片裁剪</title>
+</head>
+<body>
+  <h2>图像操作</h2>
+  
+  <div class="box">
+    <img id="image" src="" alt="">
+  </div>
+  <div class="small"></div>
+
+  <div id="navi-bar">
+    <div class="navi-name">
+      裁剪比例
+    </div>
+    <div class="navi-btn ratio-btn picked">
+      自由裁剪
+    </div>
+    <div class="navi-btn ratio-btn">
+      16:9
+    </div>
+    <div class="navi-btn ratio-btn">
+      4:3
+    </div>
+    <div class="navi-btn ratio-btn">
+      正方形
+    </div>
+    
+    <div class="navi-name">
+      旋转
+    </div>
+    <div class="navi-btn rotate-btn">
+      -45°
+    </div>
+    <div class="navi-btn rotate-btn">
+      45°
+    </div>
+  
+    <div class="navi-name">
+      翻转
+    </div>
+    <div class="navi-btn scale-btn">
+      水平翻转
+    </div>
+    <div class="navi-btn scale-btn">
+      垂直翻转
+    </div>
+  </div>
+</body>
+</html>
+
+<script>
+  $(function () {
+    const photoPath = decodeURI(location.search.substr(11))
+    const originalImage = document.getElementById('image')
+    originalImage.setAttribute('src', photoPath)
+    
+    let image = $('#image')
+    image.cropper({
+      aspectRatio: NaN,
+      viewMode: 1,
+      preview: '.small',
+      crop: function (e) {
+      
+      }
+    })
+    
+    $('.ratio-btn').click(function () {
+      $('.picked').eq(0).removeClass('picked')
+      $(this).addClass('picked')
+      if ($(this).text().indexOf('自由裁剪') !== -1) {
+        image.cropper('setAspectRatio', NaN)
+      } else if ($(this).text().indexOf('16:9') !== -1) {
+        image.cropper('setAspectRatio', 16/9)
+      } else if ($(this).text().indexOf('4:3') !== -1) {
+        image.cropper('setAspectRatio', 4/3)
+      } else if ($(this).text().indexOf('正方形') !== -1) {
+        image.cropper('setAspectRatio', 1/1)
+      }
+    })
+    
+    $('.rotate-btn').click(function () {
+      if ($(this).text().indexOf('-') !== -1) {
+        // -45°
+        image.cropper('rotate', -45)
+      } else {
+        image.cropper('rotate', 45)
+      }
+    })
+    
+    $('.scale-btn').click(function () {
+      if ($(this).text().indexOf('水平翻转') !== -1) {
+        if (image.cropper('getData', true).scaleX === 1) image.cropper('scaleX', -1)
+        else image.cropper('scaleX', 1)
+      } else {
+        if (image.cropper('getData', true).scaleY === 1) image.cropper('scaleY', -1)
+        else image.cropper('scaleY', 1)
+      }
+    })
+  })
+</script>
+
+<style>
+  html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #32353a;
+    margin: 0 0 0 0;
+  }
+  
+  h2 {
+    margin: 0 0 0 0;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  
+    text-align: center;
+    color: #b7bcbe;
+    font-family: "Arial", "STZhongsong", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+  }
+  
+  #image-box {
+    display: -webkit-flex;
+    display: flex;
+  }
+  
+  .box {
+    margin: 0 auto;
+    width: 30%;
+  }
+  
+  .box img {
+    width: 100%;
+  }
+  
+  .small {
+    width: 40%;
+    height: 30%;
+    overflow: hidden;
+    margin: 20px auto 0;
+  }
+  
+  #navi-bar {
+    background-color: #b7bcbe;
+    position: fixed;
+    top: 10%;
+    bottom: 10%;
+    
+    width: 100px;
+    padding: 0;
+    border-radius: 10px;
+    
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #navi-bar .navi-name, .navi-btn {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #navi-bar .navi-name {
+    font-weight: bold;
+    margin-top: 25px;
+  }
+  
+  #navi-bar .navi-btn {
+    border: 1px solid #32353a;
+    border-radius: 7px;
+    width: 80%;
+    transition: .3s;
+  }
+
+  #navi-bar .navi-btn:hover {
+    cursor: pointer;
+    background-color: #32353a;
+    color: #b7bcbe;
+  }
+  
+  #navi-bar .picked {
+    background-color: #32353a;
+    color: #ececec;
+  }
+</style>

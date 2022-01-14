@@ -1,0 +1,179 @@
+html, body {
+    height: 100%;
+    margin: 0 0 0 0;
+    background-color: #32353a;
+}
+
+#main-page {
+    height: 100%;
+    width: 100%;
+    color: #b7bcbe;
+
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+span[class*="border-"] {
+    position: fixed;
+    background: #1f2122;
+}
+
+.border-top {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+}
+
+.border-left {
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 100%;
+}
+
+.border-bottom {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+}
+
+.border-right {
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100%;
+}
+
+.head-line, .tail-line {
+    height: 20px;
+    width: 80%;
+}
+
+.banner {
+    font-family: "Arial", "STZhongsong", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+    margin: 45px auto 40px;
+}
+
+.change-area {
+    width: 60%;
+}
+
+.change-area form {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.change-area form div {
+    width: 100%;
+}
+
+.change-area form .input-box {
+    margin-bottom: 5px;
+    width: 50%;
+    height: 75px;
+
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.change-area form .input-box div {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.change-area form .input-box span {
+    text-align: center;
+    color: rgba(248, 90, 90);
+}
+
+
+#canvas:hover {
+    cursor: pointer;
+}
+
+.change-area input {
+    border: 0;
+    text-align: left;
+    outline-style: none;
+    height: 30px;
+    width: 100%;
+    background-color: #ffffff00;
+    color: white;
+    font-size: 20px;
+    border-bottom: 1px solid #b7bcbe;
+}
+
+.change-area img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+
+#new-password-hint-box {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#new-password-hint-box img {
+    margin-right: 3px;
+    width: 18px;
+}
+
+#confirm-change, #return-to-main {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+
+    margin: 0 auto 18px;
+    width: 170px;
+    height: 55px;
+
+    font-size: 25px;
+    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    font-weight: bold;
+    color: white;
+    background-color: #6d6d70;
+
+    transition: .3s;
+}
+
+#confirm-change:hover, #return-to-main:hover {
+    color: black;
+    background-color: #b7bcbe;
+    cursor: pointer;
+}
+
+.shake {
+    /* 抖动提示效果 */
+    animation: shake 800ms ease-in-out;
+}
+
+@keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(+2px, 0, 0); }
+    30%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(+4px, 0, 0); }
+    50% { transform: translate3d(-4px, 0, 0); }
+}
